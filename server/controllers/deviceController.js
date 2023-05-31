@@ -3,7 +3,7 @@ class DeviceController {
 
     }
 
-    async get(req, res) {
+    async getAll(req, res) {
 
     }
     async getOne(req, res) {
