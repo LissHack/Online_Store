@@ -20,7 +20,7 @@ const Auth = () => {
                     <Form.Control
                         className="mt-4"
                         placeholder="Введите ваш пароль"/>
-                    <Row className="d-flex justify-content-between mt-4 pe-4 ps-2">
+                    <Row className="d-flex justify-content-between mt-4 p-lg-4 pr-4">
                         {isLogin ?
                             <div>
                                 Нет аккаунта? <NavLink to={REGISTRATION_ROUTE}>Зарегистрируйся</NavLink>
