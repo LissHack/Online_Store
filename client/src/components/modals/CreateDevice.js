@@ -9,7 +9,7 @@ const CreateDevice = observer(({show, onHide}) => {
     const {device} = useContext(Context)
     const [info, setInfo] = useState([])
     const [name, setName] = useState('')
-    const [count, setCount] = useState(0)
+    const [useCount, setUseCount] = useState(0)
     const [file, setFile] = useState(null)
 
     useEffect(() => {
@@ -34,7 +34,7 @@ const CreateDevice = observer(({show, onHide}) => {
     const addDevice = () => {
         const formData = new FormData
         formData.append('name', name)
-        formData.append('count', `${count}`)
+        formData.append('count', `${useCount}`)
         formData.append('img', file)
         formData.append('BrandId', device.selectedBrand.id)
         formData.append('TypeId', device.selectedType.id)
@@ -87,8 +87,8 @@ const CreateDevice = observer(({show, onHide}) => {
                         placeholder="Введите название устройства"
                     />
                     <Form.Control
-                        onClick={count}
-                        onChange={e => setCount(Number(e.target.value))}
+                        onClick={useCount}
+                        onChange={e => setUseCount(Number(e.target.value))}
                         className="mt-4"
                         placeholder="Введите колличество"
                         type="number"
